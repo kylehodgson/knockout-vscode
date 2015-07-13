@@ -6,5 +6,5 @@ var PersonNameViewModel = function(first, last) {
 
   self.fullName = ko.computed(function() {
     return self.firstName() + " " + self.lastName();
-  }, self);
+  });
 };
