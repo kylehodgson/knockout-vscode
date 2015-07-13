@@ -15,7 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'bower_components/knockout/dist/knockout.debug.js',
+      'node_modules/knockout/build/output/knockout-latest.debug.js',
       'www/**/*.js',
       'spec/**/*Spec.js',
 
