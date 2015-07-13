@@ -12,7 +12,6 @@ gulp.task('webserver', function() {
     }));
 });
 
-
 var testFiles = [];
  
 gulp.task('test', function() {
@@ -28,6 +27,12 @@ gulp.task('test', function() {
 });
  
 gulp.task('default', function() {
+  gulp.src('www')
+    .pipe(webserver({
+      livereload: true,
+      directoryListing: false,
+      open: '/index.html'
+    }));
   gulp.src(testFiles)
     .pipe(karma({
       configFile: 'karma.conf.js',
